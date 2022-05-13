@@ -184,11 +184,11 @@
     @include devices {
         display: flex;
         flex-flow: wrap;
-        padding: vm(10) vm(10) vm(20) vm(26);
     }
 
     @include landscape {
         max-width: vm(306);
+        padding: vm(10) vm(10) vm(20) vm(26);
     }
 
     @include desktop {
