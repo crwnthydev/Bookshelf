@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// variables
+$desktop: 1025;
+$desktop-medium: 1440;
+$desktop-xl: 1800;
+$desktop-wide: 2600;
+$laptop: 1440;
+$mobile: 320;
+$desktop-vh: 850;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-text: #302b2a;
+$color-primary: #4c1a0d;
+$color-accent: #fffbfa;
+$color-active: #c08b61;
+$color-background: #e5dfd3;
+$color-shady: rgba(76, 26, 13, 0.4);
+
+$font-primary: 'Montserrat', sans-serif;
+
+$transition-base: all 0.4s ease-in-out;
+
+// functions
+@function vw($value, $base: $laptop) {
+	@return calc($value / $base) * 100vw;
+}
+
+@function vh($value, $base: $desktop-vh) {
+	@return calc($value / $base) * 100vh;
+}
+
+@function vm($value, $base: $mobile) {
+	@return calc($value / $base) * 100vmin;
+}
+
+//mixins
+@mixin desktop {
+	@media (min-width: ($desktop * 1px)) {
+		@content;
+	}
+}
+
+@mixin devices {
+	@media (max-width: (($desktop - 1) * 1px)) {
+		@content;
+	}
+}
+
+@mixin landscape {
+	@media (max-width: (($desktop - 1) * 1px)) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin low-screen {
+	@media (min-aspect-ratio: 1025 / 637) and (max-width: 1799px) and (min-width: 1025px) {
+		@content;
+	}
+
+	@media (min-width: 1801px) and (max-height: 1239px) {
+		@content;
+	}
+}
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.app {
+	font-family: $font-primary;
+	font-weight: 400;
+	font-style: normal;
+	font-size: vm(15);
+	line-height: vm(18);
+	color: $color-text;
+	background-color: $color-background;
+	min-height: 100vh;
+
+	@include desktop {
+		font-size: vw(17);
+		line-height: vw(21);
+	}
+
+	@include low-screen {
+		font-size: vh(17);
+		line-height: vh(21);
+	}
+}
+
+a, button {
+	outline: none;
+	color: $color-text;
+	text-decoration: none;
+	transition: $transition-base;
+}
+
+button {
+	padding: 0;
+}
+
+a {
+
+	&:hover {
+		color: $color-active;
+	}
+}
