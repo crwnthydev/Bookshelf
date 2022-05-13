@@ -1,22 +1,22 @@
 <template>
-  <div class="books-list">
-    <BookCard v-for="book in books" :key="book.id" :book="book"/>
-  </div>
+	<div class="books-list">
+		<BookCard v-for="book in books" :key="book.id" :book="book"/>
+	</div>
 </template>
 
 <script>
 import BookCard from "./BookCard";
 
 export default {
-  props: {
-    books: {
-      type: Array,
-      required: true
-    }
-  },
-  components: {
-    BookCard
-  }
+	props: {
+		books: {
+			type: Array,
+			required: true
+		}
+	},
+	components: {
+		BookCard
+	}
 }
 </script>
 

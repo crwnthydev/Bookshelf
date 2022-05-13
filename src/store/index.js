@@ -1,20 +1,20 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {
-    innerPageData: {},
-    lastRequestData: {},
-  },
-  mutations: {
+	state: {
+		innerPageData: {},
+		lastRequestData: {},
+	},
+	mutations: {
 		setCurrentBook(state, data){
 			return state.innerPageData = data
 		},
-    setLastRequest(state, response){
+		setLastRequest(state, response){
 			return state.lastRequestData = response
 		},
-  },
-  actions: {
-  },
-  modules: {
-  }
+	},
+	actions: {
+	},
+	modules: {
+	}
 })

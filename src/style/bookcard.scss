@@ -1,205 +1,205 @@
 .book-card {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    padding: vm(10) vm(10) vm(20) vm(10);
-    box-shadow: 6px 14px 30px -15px rgba(48, 43, 42, 0.2);
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	padding: vm(10) vm(10) vm(20) vm(10);
+	box-shadow: 6px 14px 30px -15px rgba(48, 43, 42, 0.2);
 
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: vm(30);
-        height: 87%;
-        background-color: $color-primary;
-        width: 3px;
-        left: vm(10);
-        border-radius: 3px;
-        transition: $transition-base;
-        opacity: 0;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: vm(30);
+		height: 87%;
+		background-color: $color-primary;
+		width: 3px;
+		left: vm(10);
+		border-radius: 3px;
+		transition: $transition-base;
+		opacity: 0;
 
-        @include landscape {
-            opacity: 1;
-        }
+		@include landscape {
+			opacity: 1;
+		}
 
-        @include desktop {
-            bottom: vw(30);
-            left: vw(10);
-            opacity: 1;
-        }
+		@include desktop {
+			bottom: vw(30);
+			left: vw(10);
+			opacity: 1;
+		}
 
-        @include low-screen {
-            bottom: vh(30);
-            left: vh(10);
-        }
-    }
+		@include low-screen {
+			bottom: vh(30);
+			left: vh(10);
+		}
+	}
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: vm(10);
-        height: 3px;
-        background-color: $color-primary;
-        width: auto;
-        left: vm(10);
-        border-radius: 3px;
-        transition: $transition-base;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: vm(10);
+		height: 3px;
+		background-color: $color-primary;
+		width: auto;
+		left: vm(10);
+		border-radius: 3px;
+		transition: $transition-base;
 
-        @include devices {
-            right: vm(10);
-        }
+		@include devices {
+			right: vm(10);
+		}
 
-        @include landscape {
-            width: vm(276);
-            right: auto;
-        }
+		@include landscape {
+			width: vm(276);
+			right: auto;
+		}
 
-        @include desktop {
-            bottom: vw(10);
-            width: vw(286);
-            left: vw(10);
-        }
+		@include desktop {
+			bottom: vw(10);
+			width: vw(286);
+			left: vw(10);
+		}
 
-        @include low-screen {
-            bottom: vh(10);
-            width: vh(286);
-            left: vh(10);
-        }
-    }
+		@include low-screen {
+			bottom: vh(10);
+			width: vh(286);
+			left: vh(10);
+		}
+	}
 
-    &__picture {
-        width: 100%;
-        overflow: hidden;
-        padding: 0 vm(15) 0 0;
-        max-width: 50%;
+	&__picture {
+		width: 100%;
+		overflow: hidden;
+		padding: 0 vm(15) 0 0;
+		max-width: 50%;
 
-        img {
-            width: 100%;
-            object-fit: cover;
-            max-height: vm(170);
-        }
-        
-        @include desktop {
-            padding: 0 vw(15) 0 0;
-            
-            img {
-                max-height: vw(170);
-            }
-        }
+		img {
+			width: 100%;
+			object-fit: cover;
+			max-height: vm(170);
+		}
+		
+		@include desktop {
+			padding: 0 vw(15) 0 0;
+			
+			img {
+				max-height: vw(170);
+			}
+		}
 
-        @include low-screen {
-            padding: 0 vh(15) 0 0;
-            
-            img {
-                max-height: vh(170);
-            }
-        }
-    }
+		@include low-screen {
+			padding: 0 vh(15) 0 0;
+			
+			img {
+				max-height: vh(170);
+			}
+		}
+	}
 
-    &__content {
-        width: 100%;
-        max-width: 50%;
-    }
+	&__content {
+		width: 100%;
+		max-width: 50%;
+	}
 
-    &__title {
-        color: $color-primary;
-        font-size: vm(20);
-        line-height: vm(24);
-        width: 100%;
-        display: block;
-        margin: 0 0 vm(15) 0;
-        transition: $transition-base;
+	&__title {
+		color: $color-primary;
+		font-size: vm(20);
+		line-height: vm(24);
+		width: 100%;
+		display: block;
+		margin: 0 0 vm(15) 0;
+		transition: $transition-base;
 
-        @include desktop {
-            font-size: vw(21);
-            line-height: vw(27);
-            margin: 0 0 vw(15) 0;
-        }
+		@include desktop {
+			font-size: vw(21);
+			line-height: vw(27);
+			margin: 0 0 vw(15) 0;
+		}
 
-        @include low-screen {
-            font-size: vh(21);
-            line-height: vh(27);
-            margin: 0 0 vh(15) 0;
-        }
-    }
+		@include low-screen {
+			font-size: vh(21);
+			line-height: vh(27);
+			margin: 0 0 vh(15) 0;
+		}
+	}
 
-    &__authors {
-        display: flex;
-        flex-direction: column;
-        margin: 0 0 vm(10);
+	&__authors {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 vm(10);
 
-        @include desktop {
-            margin: 0 0 vw(10) 0;
-        }
+		@include desktop {
+			margin: 0 0 vw(10) 0;
+		}
 
-        @include low-screen {
-            margin: 0 0 vh(10) 0;
-        }
-    }
+		@include low-screen {
+			margin: 0 0 vh(10) 0;
+		}
+	}
 
-    &__author {
-        display: none;
-        margin: 0 0 vm(4) 0;
+	&__author {
+		display: none;
+		margin: 0 0 vm(4) 0;
 
-        &:first-of-type,
-        &:nth-of-type(2),
-        &:nth-of-type(3) {
-            display: inline-block;
-        }
+		&:first-of-type,
+		&:nth-of-type(2),
+		&:nth-of-type(3) {
+			display: inline-block;
+		}
 
-        @include devices {
-            font-size: vm(14);
-            line-height: vm(16);
-        }
+		@include devices {
+			font-size: vm(14);
+			line-height: vm(16);
+		}
 
-        @include desktop {
-            margin: 0 0 vw(4) 0;
-        }
+		@include desktop {
+			margin: 0 0 vw(4) 0;
+		}
 
-        @include low-screen {
-            margin: 0 0 vh(4) 0;
-        }
-    }
+		@include low-screen {
+			margin: 0 0 vh(4) 0;
+		}
+	}
 
-    &__published {
-        font-style: italic;
+	&__published {
+		font-style: italic;
 
-        @include devices {
-            font-size: vm(13);
-        }
-    }
+		@include devices {
+			font-size: vm(13);
+		}
+	}
 
-    &:hover {
-        color: $color-text;
+	&:hover {
+		color: $color-text;
 
-        &::before,
-        &::after {
-            background-color: $color-active;
-        }
+		&::before,
+		&::after {
+			background-color: $color-active;
+		}
 
-        .book-card__title {
-            color: $color-active;
-        }
-    }
+		.book-card__title {
+			color: $color-active;
+		}
+	}
 
-    @include devices {
-        display: flex;
-        flex-flow: wrap;
-    }
+	@include devices {
+		display: flex;
+		flex-flow: wrap;
+	}
 
-    @include landscape {
-        max-width: vm(306);
-        padding: vm(10) vm(10) vm(20) vm(26);
-    }
+	@include landscape {
+		max-width: vm(306);
+		padding: vm(10) vm(10) vm(20) vm(26);
+	}
 
-    @include desktop {
-        max-width: vw(306);
-        padding: vw(10) vw(10) vw(20) vw(26);
-        display: flex;
-        flex-flow: wrap;
-    }
+	@include desktop {
+		max-width: vw(306);
+		padding: vw(10) vw(10) vw(20) vw(26);
+		display: flex;
+		flex-flow: wrap;
+	}
 
-    @include low-screen {
-        max-width: vh(306);
-        padding: vh(10) vh(10) vh(20) vh(26);
-    }
+	@include low-screen {
+		max-width: vh(306);
+		padding: vh(10) vh(10) vh(20) vh(26);
+	}
 }

@@ -1,40 +1,40 @@
 .books-list {
-    display: flex;
-    width: 100%;
-    max-width: 100%;
+	display: flex;
+	width: 100%;
+	max-width: 100%;
 
-    &__item {
-        width: 100%;
-        margin: 0 0 vm(15) 0;
+	&__item {
+		width: 100%;
+		margin: 0 0 vm(15) 0;
 
-        @include landscape {
-            margin: 0 vm(15) vm(15) 0;
-        }
+		@include landscape {
+			margin: 0 vm(15) vm(15) 0;
+		}
 
-        @include desktop {
-            margin: vw(19) vw(10);
-        }
+		@include desktop {
+			margin: vw(19) vw(10);
+		}
 
-        @include low-screen {
-            margin: vh(19) vh(10);
-        }
-    }
+		@include low-screen {
+			margin: vh(19) vh(10);
+		}
+	}
 
-    @include devices {
-        flex-direction: column;
-    }
+	@include devices {
+		flex-direction: column;
+	}
 
-    @include landscape {
-        flex-direction: row;
-        flex-flow: wrap;
-    }
+	@include landscape {
+		flex-direction: row;
+		flex-flow: wrap;
+	}
 
-    @include desktop {
-        flex-flow: wrap;
-        max-width: vw(978);
-    }
+	@include desktop {
+		flex-flow: wrap;
+		max-width: vw(978);
+	}
 
-    @include low-screen {
-        max-width: vh(978);
-    }
+	@include low-screen {
+		max-width: vh(978);
+	}
 }
