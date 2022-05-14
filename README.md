@@ -1,4 +1,4 @@
-# book_search
+# bookshelf
 
 ## Project setup
 ```

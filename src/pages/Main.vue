@@ -71,11 +71,7 @@ export default {
 		}
 	},
 	mounted(){
-		if(this.$store.state.lastRequestData.length > 0){
-			this.books = this.$store.state.lastRequestData
-		} else {
-			this.getBooks();
-		}
+		this.$store.state.lastRequestData.length > 0 ? this.books = this.$store.state.lastRequestData : this.getBooks();
 	}
 }
 </script>
